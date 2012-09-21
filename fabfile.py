@@ -5,7 +5,7 @@ from fabric.contrib.console import confirm
 @task
 def schema_diff():
     """
-    generate diff file of PostgreSQL schema using pagdiff
+    generate diff file of PostgreSQL schema using apgdiff
     fab schema_diff
     """
     # gather connect info
