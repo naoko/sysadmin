@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Line Chart</title>
+		<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.1.8/js/dx.chartjs.js"></script>
+		<script src="data.js"></script>
+		<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+	</head>
+	<body>
+		<div id="chartContainer" style="height:500px; max-width:700px; margin: 0 auto"></div>
+		<p style="font-size:.8em">powered by http://chartjs.devexpress.com/</p>
+	<script>
+		
+		$(function () {
+			$("#chartContainer").dxChart({
+				dataSource: dataSource,
+				commonSeriesSettings: {
+					argumentField: 'time',
+				},
+				series: series,
+				tooltip: {
+					enabled: true
+				},
+				title: {
+					text: 'HTTPS Request Stats'
+				},
+				legend: {
+					verticalAlignment: 'bottom',
+					horizontalAlignment: 'center'
+				}
+			});
+		});
+	
+	</script>
+	</body>
+</html>
