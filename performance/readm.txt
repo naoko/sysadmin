@@ -1,0 +1,25 @@
+There are 2 python script and one html file.
+
+This script will make HTTP/HTTPS request for
+
+=====================
+how to generate data:
+=====================
+cd to performance directory
+$ python get_perofrmance.py <url1> <url2>
+this will generate csv file under performance dir as stats_<url>.csv
+
+example:
+$ python get_perofrmance.py https://ww5.welcomeclient.com https://10.1.100.49
+
+=====================
+how to visualize data:
+=====================
+cd to performance directory
+make sure you have stats_<url>.csv files
+
+$ python gen_data_from_csv.py
+this will generate (overwrites) data.js
+
+open chartjs.html with latest browser
+
